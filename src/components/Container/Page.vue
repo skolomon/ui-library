@@ -398,7 +398,7 @@ a.app__navItem {
 }
 
 a.app__navItem--isCurrent {
-	background: @bg-anchor;
+	background: @bg-anchor-shade;
 	border-radius: @radius;
 	font-weight: bold;
 	color: #fff;
