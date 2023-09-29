@@ -29,3 +29,7 @@ PKP_DOCS_VERSION=<version> npm run build
 ## Issues
 
 Please file any development issues or questions with the [pkp/pkp-lib](https://github.com/pkp/pkp-lib) repository.
+
+## skolomon
+
+all changes go to *dev* branch
