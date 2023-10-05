@@ -74,6 +74,7 @@ export default {
 	border-color: @primary;
 	background-color: @primary;
 	color: #fff;
+	padding-block: 0.45em; //skolomon
 
 	&:before {
 		border-color: #fff;

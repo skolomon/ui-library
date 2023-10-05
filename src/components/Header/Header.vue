@@ -17,7 +17,7 @@ export default {
 	props: {
 		isOneLine: {
 			type: Boolean,
-			default: true,
+			default: false, //true, //skolomon
 		},
 	},
 	computed: {
@@ -71,6 +71,16 @@ export default {
 .pkpHeader__actions {
 	float: right;
 	margin-top: -1px; // button borders
+	//skolomon:
+	display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+	margin-left: auto;
+	@media(max-width: 500px) {
+		flex-wrap: wrap;
+		flex-direction: column; 		
+	}
 
 	> * {
 		display: inline-block;

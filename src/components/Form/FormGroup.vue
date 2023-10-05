@@ -11,7 +11,7 @@
 		<div class="pkpFormGroup__fields">
 			<template v-for="field in fieldsInGroup">
 				<template v-if="field.isMultilingual">
-					<div class="pkpFormGroup__localeGroup -pkpClearfix" :key="field.name">
+					<div class="pkpFormGroup__localeGroup" :key="field.name"> 
 						<div
 							v-for="locale in availableLocales"
 							:key="locale.key"
@@ -210,8 +210,12 @@ export default {
 .pkpFormGroup {
 	position: relative;
 	margin: 0;
-	padding: 2rem;
+	padding: 1rem; //skolomon
 	border: none;
+
+	@media (min-width: 768px) {
+		padding: 2rem;
+	}
 
 	+ .pkpFormGroup {
 		border-top: @bg-border-light;
@@ -286,12 +290,13 @@ export default {
 	.pkpFormGroup__locale--isVisible {
 		float: left;
 		width: 50%;
-		padding-inline-end: 1.5rem;
+		// padding-inline-end: 1.5rem; //skolomon
 
-		~ .pkpFormGroup__locale--isVisible {
-			padding-inline-end: 0;
-			padding-inline-start: 1.5rem;
-		}
+		//skolomon
+		// ~ .pkpFormGroup__locale--isVisible {
+		// 	padding-inline-end: 0;
+		// 	padding-inline-start: 1.5rem;
+		// }
 	}
 }
 [dir='rtl'] {

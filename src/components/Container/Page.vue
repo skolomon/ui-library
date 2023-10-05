@@ -171,7 +171,7 @@ export default {
 	display: flex;
 	align-items: center;
 	min-height: 3rem;
-	background: @bg-anchor;
+	background: @bg-header;
 	font-size: 0.85rem;
 	z-index: 10;
 }
@@ -283,6 +283,9 @@ export default {
 	right: 0.25rem;
 }
 
+.app__userNav > .pkpButton { //skolomon
+	height: 100%;
+}
 .app__userNav > .pkpButton > .app__userNav__isLoggedInAsWarning {
 	position: absolute;
 	right: 0.5em;

@@ -828,6 +828,7 @@ export default {
 		display: flex;
 		align-items: center;
 		margin: 1rem;
+		flex-wrap: wrap; //skolomon
 	}
 
 	.pkpBadge {
@@ -839,11 +840,13 @@ export default {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	flex: 1 50%; //skolomon
 }
 
 .submissionWizard__reviewPanel__list__actions {
 	margin-inline-start: auto;
-	white-space: nowrap;
+	// white-space: nowrap; //skolomon
+	text-align: end; //skolomon
 
 	> * {
 		margin-inline-start: 0.5rem;

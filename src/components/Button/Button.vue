@@ -63,18 +63,20 @@ export default {
 .pkpButton {
 	display: inline-block;
 	padding: 0 0.5em;
-	min-width: 2.13rem; // Always at least as wide as it is tall
+	// min-width: 2.13rem; // Always at least as wide as it is tall
 	background: #fff;
 	border: @bg-border-light;
 	border-radius: @radius;
 	text-align: center;
 	font-size: @font-sml;
-	line-height: 2rem;
+	line-height: 1em; //2rem; //skolomon
 	font-weight: @semibold;
 	color: @primary;
 	text-decoration: none;
 	box-shadow: 0 1px 0 @bg-border-color-light;
 	cursor: pointer;
+	padding: 0.65em 0.5em;
+	min-width: auto; //skolomon
 
 	&:hover {
 		color: @primary;

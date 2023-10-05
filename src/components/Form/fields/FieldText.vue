@@ -211,7 +211,9 @@ export default {
 }
 
 .pkpFormField--text__input {
-	width: 20em;
+	// width: 20em;
+	width: 100%; //skolomon
+	// min-width: 20em; //skolomon
 	display: inline-block;
 }
 
@@ -288,7 +290,9 @@ export default {
 
 .pkpFormField--sizesmall {
 	.pkpFormField--text__input {
-		width: 10em;
+		// width: 10em;
+		width: 100%; //skolomon
+		// min-width: 10em; //skolomon
 	}
 }
 

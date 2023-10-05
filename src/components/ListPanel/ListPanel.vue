@@ -156,6 +156,9 @@ export default {
 
 	> .pkpHeader {
 		padding: 0;
+		//skolomon:
+		display: flex;
+		// justify-content: space-between;
 	}
 }
 
@@ -266,7 +269,7 @@ export default {
 .listPanel__itemIdentity {
 	font-size: @font-sml;
 	line-height: 1.5rem;
-	flex: 1;
+	flex: 1 50%;
 	min-width: 0;
 }
 
@@ -274,11 +277,13 @@ export default {
 	font-weight: @bold;
 }
 
-.listPanel__itemTitle,
-.listPanel__itemSubtitle {
-	white-space: nowrap;
+.listPanel__itemTitle {
+	white-space: normal; //skolomon: allow wrap
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+.listPanel__itemSubtitle {
+ 	white-space: normal; //skolomon: allow wrapping long institution names
 }
 
 .listPanel__empty {
@@ -295,9 +300,20 @@ export default {
 	padding-inline-start: 0.5rem;
 	font-size: @font-tiny;
 	line-height: 1.5em;
+	justify-content: flex-end;
+	//skolomon:
+	@media(max-width: 500px) {
+		flex-direction: column;
+		align-items: flex-end;
+	}
 
 	> * {
-		white-space: nowrap;
+		white-space: normal; //skolomon: allow wrap
+		//skolomon:
+		text-wrap: balance;
+		// max-width: 50%; //REVISE
+		line-height: 1.1em;
+		text-align: center;
 	}
 
 	// Space between each button or action

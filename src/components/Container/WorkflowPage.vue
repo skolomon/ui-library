@@ -636,9 +636,12 @@ export default {
 }
 
 .pkpPublication__header {
-	margin: -2rem -2rem 0;
+	margin: -1rem -1rem 0; //skolomon
 	padding: 1rem;
 	border-bottom: @bg-border-light;
+	@media(min-width: 768px) { //skolomon
+		margin: -2rem -2rem 0;
+	}
 
 	.pkpHeader__title {
 		padding: 0;

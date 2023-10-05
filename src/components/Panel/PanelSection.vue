@@ -60,14 +60,14 @@ export default {
 @media (min-width: 1200px) {
 	.panel--wide {
 		.panelSection {
-			display: flex;
+			// display: flex; //skolomon: always display full width
 			padding: 2rem;
 		}
 
 		.panelSection__header {
-			width: 35%;
-			min-width: 16rem;
-			max-width: 30rem;
+			// width: 35%; //skolomon: always display full width
+			// min-width: 16rem;
+			// max-width: 30rem;
 			margin-inline-end: 2rem;
 		}
 

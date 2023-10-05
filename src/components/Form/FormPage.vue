@@ -53,7 +53,13 @@
 				"
 				@click="submit"
 			>
-				{{ submitButton.label }}
+				<!-- skolomon: -->
+				<!-- <template v-if="formId !== 'contributor'"> -->
+					{{ submitButton.label }}
+				<!-- </template> -->
+				<!-- <template v-else>
+					{{ submitButton.label }} plus {{ __('form.author.buttonSearch') }}
+				</template> -->
 			</pkp-button>
 		</button-row>
 	</div>

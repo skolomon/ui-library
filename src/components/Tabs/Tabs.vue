@@ -316,7 +316,7 @@ export default {
 	/* Side-tabs */
 	.pkpTabs--side {
 		display: grid;
-		grid-template-columns: 192px auto;
+		grid-template-columns: max-content auto; //192px auto; //skolomon
 
 		.pkpTabs__buttons {
 			padding-left: 0;

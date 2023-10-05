@@ -24,6 +24,11 @@ export default {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	//skolomon:
+	@media(max-width: 500px) {
+		flex-wrap: wrap;
+		justify-content: flex-end;		
+	}
 
 	> * + * {
 		margin-inline-start: 0.25rem;
