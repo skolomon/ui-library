@@ -291,7 +291,7 @@ export default {
 	}
 
 	.pkpTab {
-		padding: 2rem;
+		padding: 1.5rem; //skolomon
 		border: @bg-border-light;
 		border-radius: @radius;
 	}

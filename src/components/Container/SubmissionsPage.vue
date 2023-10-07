@@ -401,7 +401,7 @@ export default {
 
 .pkp_page_submissions .app__main {
 	background: @lift;
-	padding: 0 1rem 0 0;
+	// padding: 0 1rem 0 0; //skolomon
 }
 
 .submissions {
