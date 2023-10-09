@@ -1,6 +1,7 @@
 <template>
 	<div class="pkpWorkflow">
-		<pkp-header :is-one-line="true" class="pkpWorkflow__header">
+		<pkp-header class="pkpWorkflow__header"> 
+			<!-- :is-one-line="true" -->
 			<h1 class="pkpWorkflow__identification">
 				<badge
 					v-if="submission.status === getConstant('STATUS_PUBLISHED')"

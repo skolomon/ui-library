@@ -608,6 +608,7 @@ export default {
 	margin-bottom: 2rem;
 	padding: 0;
 	min-height: 2rem;
+	display: flex;
 }
 
 .pkpWorkflow__header .pkpWorkflow__identification {
