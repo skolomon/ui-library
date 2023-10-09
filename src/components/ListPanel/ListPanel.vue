@@ -302,6 +302,7 @@ export default {
 	line-height: 1.5em;
 	justify-content: flex-end;
 	//skolomon:
+	row-gap: 0.25rem;
 	@media(max-width: 500px) {
 		flex-direction: column;
 		align-items: flex-end;

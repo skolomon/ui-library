@@ -79,6 +79,7 @@ export default {
 	margin-left: auto;
 	justify-content: flex-end;
     flex: 1;
+	row-gap: 0.25rem;
 
 	> * {
 		display: inline-block;

@@ -25,6 +25,7 @@ export default {
 	align-items: center;
 	justify-content: flex-end;
 	//skolomon:
+	row-gap: 0.25rem;
 	@media(max-width: 500px) {
 		flex-wrap: wrap;
 		justify-content: flex-end;		
