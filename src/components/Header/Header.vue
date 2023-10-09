@@ -75,12 +75,10 @@ export default {
 	display: flex;
     flex-direction: row;
     align-items: flex-end;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 	margin-left: auto;
-	@media(max-width: 500px) {
-		flex-wrap: wrap;
-		flex-direction: column; 		
-	}
+	justify-content: flex-end;
+    flex: 1;
 
 	> * {
 		display: inline-block;

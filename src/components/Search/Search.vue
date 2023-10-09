@@ -82,7 +82,8 @@ export default {
 
 .pkpSearch {
 	position: relative;
-	width: 18rem;
+	// width: 18rem; //skolomon
+	flex: 0 1 18rem; //skolomon
 	max-width: 100%;
 }
 
