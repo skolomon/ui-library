@@ -388,6 +388,6 @@ export default {
 // Override collapsed padding when a popup
 // modal is nested inside of a section
 .panelSection .modal--popup .pkpFormGroup {
-	padding: 2rem 1.25rem;
+	padding: 1.25rem;
 }
 </style>

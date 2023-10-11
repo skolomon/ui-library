@@ -105,7 +105,7 @@ export default {
 		hiddenFields: Object,
 		pages: Array,
 		primaryLocale: String,
-		visibleLocales: Array,
+		// visibleLocales: Array, //skolomon
 		supportedFormLocales: Array,
 	},
 	data() {
@@ -113,6 +113,7 @@ export default {
 			currentPage: '',
 			isSaving: false,
 			lastSaveTimestamp: -1,
+			visibleLocales: ['uk', 'en'] //skolomon
 		};
 	},
 	computed: {

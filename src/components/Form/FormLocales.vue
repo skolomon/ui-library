@@ -94,6 +94,7 @@ export default {
 @import '../../styles/_import';
 
 .pkpFormLocales {
+	display: none; //skolomon
 	position: relative;
 	padding: 0 1rem;
 	border-bottom: @bg-border-light;

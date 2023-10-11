@@ -28,7 +28,7 @@ export default {
 }
 
 .panelSection__header {
-	margin-bottom: 1rem;
+	margin-bottom: 2rem; //skolomon
 	font-size: @font-sml;
 	line-height: @line-sml;
 
