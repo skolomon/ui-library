@@ -53,13 +53,8 @@
 				"
 				@click="submit"
 			>
-				<!-- skolomon: -->
-				<!-- <template v-if="formId !== 'contributor'"> -->
-					{{ submitButton.label }}
-				<!-- </template> -->
-				<!-- <template v-else>
-					{{ submitButton.label }} plus {{ __('form.author.buttonSearch') }}
-				</template> -->
+				<!-- {{ submitButton.label }} skolomon -->
+				{{ submitLabel?? __('common.save')  }}
 			</pkp-button>
 		</button-row>
 	</div>
@@ -221,6 +216,15 @@ export default {
 				this.hasRecentSave = true;
 			}
 		}, 250);
+		//skolomon
+		let isEditContrib = this.formId === 'contributor' && !!this.fields.find(({ name }) => name === "email")?.value;
+		this.submitLabel = isEditContrib ? null : this.submitButton?.label;
+		if (isEditContrib) {
+			let descrField = this.fields.find(({ name }) => name === "descriptionRitNod");
+			if (descrField?.description) {
+				descrField.description = "";
+			}
+		}
 	},
 	destroyed() {
 		clearInterval(this.recentSaveInterval);
