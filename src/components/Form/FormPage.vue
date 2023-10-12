@@ -221,8 +221,14 @@ export default {
 		this.submitLabel = isEditContrib ? null : this.submitButton?.label;
 		if (isEditContrib) {
 			let descrField = this.fields.find(({ name }) => name === "descriptionRitNod");
-			if (descrField?.description) {
-				descrField.description = "";
+			if (descrField?.component) {
+				descrField.component = null;
+			}
+		}
+		else {
+			let prefName = this.fields.find(({ name }) => name === "preferredPublicName");
+			if (prefName?.component) {
+				prefName.component = null;
 			}
 		}
 	},
