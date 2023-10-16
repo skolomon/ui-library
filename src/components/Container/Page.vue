@@ -351,7 +351,7 @@ export default {
 }
 
 .app__nav {
-	flex: 0 0 15rem;
+	flex: 0 1 15rem; //skolomon: allow side nav to shrink
 	padding-top: 1.5rem;
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
