@@ -59,7 +59,7 @@ export default {
 <style lang="less">
 @import '../../styles/_import';
 .pkpWorkflow__relation .pkpDropdown__content {
-	min-width: 25em;
-	max-width: 25em;
+	min-width: 20em;
+	max-width: 20em;
 }
 </style>
