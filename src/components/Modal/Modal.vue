@@ -270,6 +270,7 @@ export default {
 		max-width: 50rem;
 		margin-left: auto;
 		margin-right: auto;
+		border-radius: 0.75rem;
 	}
 
 	.v--modal-dialog.v--modal-dialog {
