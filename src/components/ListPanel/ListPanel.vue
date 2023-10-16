@@ -280,7 +280,7 @@ export default {
 .listPanel__itemTitle {
 	white-space: normal; //skolomon: allow wrap
 	min-width: 4rem; //skolomon: prevent shrink to 0
-	overflow: hidden;
+	// overflow: hidden; //skolomon
 	text-overflow: ellipsis;
 }
 .listPanel__itemSubtitle {
