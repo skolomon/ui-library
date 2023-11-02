@@ -266,6 +266,13 @@ export default {
 	}
 }
 
+//skolomon
+@media not (min-width: 767px) {
+	#myQueue.pkpTab {
+		padding: 1rem 0.5rem 1rem 0;
+	}
+}
+
 // Nested tabs
 .pkpTabs .pkpTabs {
 	margin-left: -1rem;

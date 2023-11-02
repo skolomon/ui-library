@@ -664,12 +664,15 @@ export default {
 }
 
 .pkpPublication__versionPublished {
-	margin: 0 -2rem;
+	margin: 0 -1rem;
 	padding: 1rem;
 	background: @no-red;
 	font-size: @font-sml;
 	color: #fff;
 	text-align: center;
+	@media (min-width: 767px) {
+		margin: 0 -2rem;
+	}
 }
 
 .pkpPublication__tabs.pkpTabs--side {

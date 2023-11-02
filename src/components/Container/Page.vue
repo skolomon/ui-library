@@ -174,6 +174,7 @@ export default {
 	background: @bg-header;
 	font-size: 0.85rem;
 	z-index: 10;
+	align-items: stretch; //skolomon
 }
 
 .app__contextTitle {
@@ -191,6 +192,8 @@ export default {
 	text-decoration: none;
 	border: 1px solid transparent;
 	border-radius: @radius;
+	display: flex; //skolomon
+    align-items: center;
 
 	&:hover {
 		color: #fff;
@@ -215,6 +218,7 @@ export default {
 }
 
 .app__headerAction {
+	height: 100%; //skolomon
 	> button {
 		padding: 0.5rem 1rem;
 		box-shadow: none;
@@ -226,6 +230,10 @@ export default {
 		box-shadow: 0 0 0 #fff;
 		transform: translateY(0);
 		transition: 0.15s all;
+		height: 100%; //skolomon
+		@media (max-width: 400px) { //skolomon
+			padding-inline: 0.75rem; 
+		}
 
 		.fa {
 			font-size: 1.5rem;
@@ -241,9 +249,14 @@ export default {
 		}
 	}
 }
+.app__contextImage .app__headerAction > button { //skolomon
+	padding-inline: .75rem 0.75rem;
+    margin-inline: 0 0.5rem;
+}
 
 .app__contexts {
 	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	height: auto; //skolomon
 }
 
 .app__contexts > .pkpButton .fa {
@@ -265,6 +278,9 @@ export default {
 	line-height: 2rem;
 	color: #fff;
 	cursor: pointer;
+	@media (max-width: 400px) { //skolomon
+		padding-inline: 0.75rem; 
+	}
 }
 
 .app__tasksCount {
