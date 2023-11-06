@@ -128,6 +128,20 @@ export default {
 	}
 }
 
+.pkpButton--yesButton { //skolomon
+	color: #fff;
+	background: @yes;
+	border-color: @yes;
+	box-shadow: 0 1px 0 @yes;
+
+	&:hover,
+	&:focus-visible {
+		background: @yes-lift;
+		color: #fff;
+		border-color: @yes;
+	}
+}
+
 /**
  * State modifiers
  */
