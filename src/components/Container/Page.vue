@@ -361,12 +361,13 @@ export default {
 	}
 }
 
-.app__backArrow {
+.app__backArrow { //skolomon
 	margin-right: 0.75rem;
     font-size: 2.5rem;
     position: relative;
     top: 0.5rem;
     line-height: 1rem;
+	margin-left: -0.25rem;
 }
 
 .app__body {
