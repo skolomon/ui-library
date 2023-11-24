@@ -141,6 +141,10 @@ export default {
 		color: #fff;
 		border-color: @yes;
 	}
+	&:focus-visible {
+		outline: 2px solid @yes;
+		outline-offset: 0px;
+	}
 }
 
 /**

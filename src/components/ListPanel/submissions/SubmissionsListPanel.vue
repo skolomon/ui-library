@@ -24,6 +24,7 @@
 						v-if="addUrl && currentUserCanAddSubmission"
 						element="a"
 						:href="addUrl"
+						:class="{'pkpButton--yesButton' : currentUserIsAuthor}"
 					>
 						{{ __('submission.submit.newSubmissionSingle') }}
 					</pkp-button>
@@ -194,6 +195,12 @@ export default {
 					pkp.const.ROLE_ID_AUTHOR,
 					pkp.const.ROLE_ID_REVIEWER,
 				])
+			);
+		},
+		currentUserIsAuthor() { //skolomon
+			return (
+				this.allowSubmissions &&
+				this.userHasRole(pkp.const.ROLE_ID_AUTHOR)
 			);
 		},
 	},
