@@ -117,11 +117,14 @@ export default {
 		 */
 		let notificationUniqueKey = 0;
 		pkp.eventBus.$on('notify', (message, type) => {
+			let keepSec = message.substring(0, 4).toUpperCase() === 'KEEP' ? +message.substring(4, 6) : 0;
+			if (keepSec) { message = message.substring(6); }
 			this.notifications.push({
 				key: notificationUniqueKey,
 				message: message,
 				type: type ?? 'notice',
-				expire: Date.now() + 5000, // milliseconds
+				expire: Date.now() + (keepSec ? (keepSec * 1000) : 5000), // milliseconds
+				keep: keepSec > 10 ? true : false,
 			});
 			notificationUniqueKey++;
 		});
@@ -558,6 +561,51 @@ a.app__navItem--isCurrent {
 .app__notification-leave-to {
 	transform: translateY(-1.5rem);
 	opacity: 0;
+}
+
+//skolomon
+.app__notifications_keep {
+	top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 50%);
+	.notifications_container {
+		max-width: 30rem;
+		width: 80%!important;
+		margin-inline: auto;
+		margin-top: 5rem;
+	}
+
+	.pkpNotification--warning {
+		box-shadow: inset 0 0.25rem 0 @no;
+	}
+}
+.notification_keep {
+	padding-inline-end: 0.75rem;
+	border-radius: 0.5rem;
+
+	div {
+		font-size: 1rem;
+	}
+	.title {
+		padding-inline-end: 2.5rem;
+		margin-top: 0rem;
+		border-bottom: 1px solid @bg-dark;
+		padding-block: 0.15rem 0.4rem;
+	}
+	.pkpNotificationKeep__closeButton {
+		display: block;
+		margin-left: auto;
+	}
+	.pkpNotification__closeButton {
+		font-size: 2rem;
+	}
+	.no-red {
+		color: #d00a0a;
+	}
 }
 
 // Full-page loading screen
