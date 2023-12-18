@@ -181,9 +181,10 @@ export default {
 }
 
 .app__contextTitle {
-	margin-left: 0.5rem;
-	margin-right: 0.5rem;
-	padding: 0.5rem;
+	// margin-left: 0.5rem;
+	// margin-right: 0.5rem;
+	// padding: 0.5rem;
+	padding: 0 1rem 0 0; //skolomon
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -252,7 +253,8 @@ export default {
 		}
 	}
 }
-.app__contextImage .app__headerAction > button { //skolomon
+.app__contextImage .app__headerAction > button,
+.app__contextTitle .app__headerAction > button { //skolomon
 	padding-inline: .75rem 0.75rem;
     margin-inline: 0 0.5rem;
 }
@@ -361,6 +363,9 @@ export default {
 		outline: none;
 		border-color: #fff;
 		color: #fff;
+	}
+	&:hover { //skolomon
+		color: #ddd;
 	}
 }
 
@@ -573,7 +578,7 @@ a.app__navItem--isCurrent {
     height: 100%;
     background: rgb(0 0 0 / 50%);
 	.notifications_container {
-		max-width: 30rem;
+		max-width: 35rem;
 		width: 80%!important;
 		margin-inline: auto;
 		margin-top: 5rem;
