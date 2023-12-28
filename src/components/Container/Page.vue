@@ -257,6 +257,7 @@ export default {
 .app__contextTitle .app__headerAction > button { //skolomon
 	padding-inline: .75rem 0.75rem;
     margin-inline: 0 0.5rem;
+	cursor: pointer;
 }
 
 .app__contexts {

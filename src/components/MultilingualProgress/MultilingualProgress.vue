@@ -1,6 +1,6 @@
 <template>
 	<span class="multilingualProgress" :class="classes">
-		<button v-tooltip="tooltip" type="button" aria-hidden="true" @click.prevent>
+		<button v-tooltip="tooltip" type="button" aria-hidden="true" @click.prevent tabindex="-1">
 			<icon icon="globe" />
 		</button>
 		<span class="-screenReader">{{ tooltip }}</span>
