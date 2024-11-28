@@ -230,6 +230,14 @@ export default {
 			if (prefName?.component) {
 				prefName.component = null;
 			}
+			prefName = this.fields.find(({ name }) => name === "userGroupId");
+			if (prefName?.component) {
+				prefName.component = null;
+			}
+			prefName = this.fields.find(({ name }) => name === "includeInBrowse");
+			if (prefName?.component) {
+				prefName.component = null;
+			}
 		}
 	},
 	destroyed() {
