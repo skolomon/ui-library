@@ -60,6 +60,7 @@ export default {
 			i18nUnableToSave: '',
 			i18nUnsavedChanges: '',
 			i18nUnsavedChangesMessage: '',
+			i18nWarnHanging: '',
 		};
 	},
 	computed: {
@@ -481,6 +482,7 @@ export default {
 		 * request with any required confirmation fields
 		 */
 		submit() {
+			const warn_html = this.i18nWarnHanging;
 			this.openDialog({
 				name: 'submitConfirmation',
 				title: this.i18nSubmit,
@@ -503,6 +505,14 @@ export default {
 									(data, field) => ({...data, [field.name]: field.value}),
 									{}
 								);
+
+							//skolomon: warn if dialog hanging for long...
+							setTimeout(() => {
+								let el = $('.modal__content');
+								el.css('color', 'gray');
+								el.after("<div class='modal__content'>" + warn_html + "</div>");
+							}, 8000);
+
 							$.ajax({
 								url: this.submitApiUrl,
 								context: this,
