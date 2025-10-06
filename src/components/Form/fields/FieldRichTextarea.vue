@@ -375,6 +375,20 @@ export default {
 	}
 }
 
+// pkpFormField__control pkpFormField--richTextarea__control pkpFormField--richTextArea__control--small
+.pkpFormField--richTextArea__control--small {
+	.pkpFormField--richTextarea__input,
+	.tox-tinymce {
+		height: 9.35em !important;
+		.tox-edit-area {
+			margin: -1.35em 0 0 -0.65em;
+		}
+		.tox-toolbar__group:nth-of-type(2) {
+			display: none;
+		}
+	}
+}
+
 // Align the TinyMCE toolbar correctly when it is used for a
 // RTL language. The `directionality` config property is passed
 // to TinyMCE, but it doesn't seem to effect the toolbar.

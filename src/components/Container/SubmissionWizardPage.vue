@@ -286,6 +286,13 @@ export default {
 			if (this.isOnLastStep) {
 				this.submit();
 			} else {
+				if (this.isOnFirstStep) {
+
+					setTimeout(() =>
+					{
+						window.location.reload();
+					}, 1);
+				}
 				this.openStep(this.steps[1 + this.currentStepIndex].id);
 			}
 		},
