@@ -101,6 +101,10 @@
 					</template>
 				</template>
 			</list-panel>
+			<!-- Sasz: warn to check co-authors after adding -->
+			<div v-if="items.length>1">
+				<p class="coauthor_warning" v-html="i18nWarning"></p>
+			</div>
 			<modal
 				:closeLabel="__('common.close')"
 				:name="formModal"
@@ -259,6 +263,10 @@ export default {
 		i18nSetPrimaryContact: {
 			type: String,
 			required: true,
+		},
+		i18nWarning: {
+			type: String,
+			required: false,
 		},
 	},
 	data() {
@@ -673,5 +681,12 @@ export default {
 	.listPanel__itemSummary {
 		margin-inline-end: 8rem;
 	}
+}
+.coauthor_warning {
+	margin-top: revert!important;
+	background-color: lightyellow;
+	font-size: @font-sml;
+	line-height: @line-sml;
+	border-radius: @radius;
 }
 </style>
